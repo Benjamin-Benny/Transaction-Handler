@@ -1,4 +1,4 @@
-package com.project.transcaction_handler.config;
+package com.project.transaction_handler.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;

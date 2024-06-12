@@ -1,8 +1,8 @@
-package com.project.transcaction_handler.controller;
+package com.project.transaction_handler.controller;
 
-import com.project.transcaction_handler.config.JwtUtil;
-import com.project.transcaction_handler.model.User;
-import com.project.transcaction_handler.service.UserService;
+import com.project.transaction_handler.config.JwtUtil;
+import com.project.transaction_handler.model.User;
+import com.project.transaction_handler.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,10 +1,11 @@
-package com.project.transcaction_handler.service;
+package com.project.transaction_handler.service;
 
-import com.project.transcaction_handler.model.User;
-import com.project.transcaction_handler.repository.UserRepository;
+import com.project.transaction_handler.model.User;
+import com.project.transaction_handler.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
@@ -14,8 +15,12 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public void save(User user) {
-        userRepository.save(user);
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
+    public User save(User user) {
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        return userRepository.save(user);
     }
 
     public User findByUsername(String username) {

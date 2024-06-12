@@ -1,6 +1,6 @@
-package com.project.transcaction_handler.config;
+package com.project.transaction_handler.config;
 
-import com.project.transcaction_handler.service.UserService;
+import com.project.transaction_handler.service.UserService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -39,7 +39,9 @@ public class JwtRequestFilter extends OncePerRequestFilter {
         if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
             UserDetails userDetails = userService.loadUserByUsername(username);
 
-            if (jwtUtil.extractUsername(jwt).equals(userDetails.getUsername())) {
+            String extractedUsername = jwtUtil.extractUsername(jwt);
+            if (extractedUsername.equals(userDetails.getUsername())) {
+
                 UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken =
                         new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
                 usernamePasswordAuthenticationToken

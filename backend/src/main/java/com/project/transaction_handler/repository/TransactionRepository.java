@@ -1,6 +1,6 @@
-package com.project.transcaction_handler.repository;
+package com.project.transaction_handler.repository;
 
-import com.project.transcaction_handler.model.Transaction;
+import com.project.transaction_handler.model.Transaction;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
