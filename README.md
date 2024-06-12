@@ -123,7 +123,7 @@ bin/kafka-topics.sh --create --topic transactions --bootstrap-server localhost:9
 Navigate to the backend directory of your project.
 Run the Spring Boot application using your IDE or command line:
 
-arduino
+bash
 ```
 ./mvnw spring-boot:run
 ```
