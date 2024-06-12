@@ -19,6 +19,8 @@ Install PostgreSQL on your local machine. You can download and install PostgreSQ
 Install Apache Kafka for real-time streaming. You can download and install Kafka from the official website or use package managers.
 
 
+
+
 ### Database Setup
 
 #### Create Database: 
@@ -52,6 +54,35 @@ CREATE TABLE tasks (
 );
 ```
 
+### Backend and Frontend Setup 
+
+Clone the Git repository:
+
+bash
+```
+git clone https://github.com/Benjamin-Benny/Transaction-Handler.git
+```
+This repo contains both '/frontend' and '/backend' folders.
+
+#### Update the application.properties file
+Go through the application.properties file for your Spring Boot backend:
+
+properties
+```
+# Database Configuration
+spring.datasource.url=jdbc:postgresql://localhost:5432/transaction_monitoring
+spring.datasource.username=your_database_username
+spring.datasource.password=your_database_password
+
+# Hibernate Properties
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.hibernate.ddl-auto=update
+```
+
+Replace your_database_username and your_database_password with your PostgreSQL database username and password respectively.
+
+###### This file can be found in the 'src/main/resources' directory of your Spring Boot project. With these settings, Spring Boot will use the specified PostgreSQL database for your application.
+
 
 ### Kafka Setup
 
@@ -65,7 +96,6 @@ bash
 ```
 bin/zookeeper-server-start.sh config/zookeeper.properties
 ```
-
 
 #### Start Kafka Server:
 Start the Kafka server by running the following command:
@@ -83,6 +113,7 @@ bash
 ```
 bin/kafka-topics.sh --create --topic transactions --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1
 ```
+
 
 
 ### Running the Application
