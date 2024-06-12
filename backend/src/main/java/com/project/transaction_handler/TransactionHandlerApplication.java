@@ -1,13 +1,13 @@
-package com.project.transcaction_handler;
+package com.project.transaction_handler;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TranscactionHandlerApplication {
+public class TransactionHandlerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TranscactionHandlerApplication.class, args);
+		SpringApplication.run(TransactionHandlerApplication.class, args);
 	}
 
 }

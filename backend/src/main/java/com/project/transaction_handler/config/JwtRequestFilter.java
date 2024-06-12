@@ -1,6 +1,6 @@
-package com.project.transcaction_handler.config;
+package com.project.transaction_handler.config;
 
-import com.project.transcaction_handler.service.UserService;
+import com.project.transaction_handler.service.UserService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

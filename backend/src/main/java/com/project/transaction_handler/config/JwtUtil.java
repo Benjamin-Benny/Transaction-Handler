@@ -1,4 +1,4 @@
-package com.project.transcaction_handler.config;
+package com.project.transaction_handler.config;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

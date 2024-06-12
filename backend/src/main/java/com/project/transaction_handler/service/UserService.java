@@ -1,7 +1,7 @@
-package com.project.transcaction_handler.service;
+package com.project.transaction_handler.service;
 
-import com.project.transcaction_handler.model.User;
-import com.project.transcaction_handler.repository.UserRepository;
+import com.project.transaction_handler.model.User;
+import com.project.transaction_handler.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

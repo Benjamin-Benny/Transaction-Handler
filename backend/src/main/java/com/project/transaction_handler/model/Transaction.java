@@ -1,23 +1,23 @@
-package com.project.transcaction_handler.model;
+package com.project.transaction_handler.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Data;
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
-@Entity
+import java.util.Date;
+
 @Data
+@Entity
 public class Transaction {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    private BigDecimal amount;
-    private String currency;
-    private LocalDateTime timestamp;
+    private String description;
+    private Double amount;
+    private Date timestamp;
+    private boolean fraud;
     private Long userId;
-    private boolean isFraudulent;
+
 }
